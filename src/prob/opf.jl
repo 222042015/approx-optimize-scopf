@@ -321,7 +321,7 @@ function build_c1_opf_surrogate(pm::_PM.AbstractPowerModel)
     hiddens = [16, 64]
     # hiddens = Vector{Int}()
 
-    weights_dir = "/home/jxxiong/A-xjx/Evaluation/model/weights/no_regularization/"
+    weights_dir = "path_to_weights"
     model_julia = create_model(hiddens)
     load_weights!(model_julia, weights_dir, m, 1, hiddens)
     myFunction = create_function(model_julia, x_fixed, length(x_fixed))
